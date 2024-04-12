@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaQuestionCircle } from "react-icons/fa";
 import { IoIosContacts } from "react-icons/io";
 import { MdShoppingCart } from "react-icons/md";
 import useOnline from "../../Hooks/useOnline";
+import userContext from "../../utils/userContext";
 
 const Header = () => {
   const isOnline = useOnline();
+  const { username } = useContext(userContext);
   return (
     <div className="flex text-black-400 font-semibold justify-between h-50 items-center">
       <div className="bg-black">
@@ -46,6 +48,7 @@ const Header = () => {
             <MdShoppingCart className="ml-1 mr-5" />
           </div>
         </Link>
+        <h1>{username}</h1>
       </div>
     </div>
   );
