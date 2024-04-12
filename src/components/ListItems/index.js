@@ -1,9 +1,17 @@
 import React from "react";
 import { ITEM_IMG } from "../../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/cartSlice";
 
 const ListItems = (data) => {
   const items = data.data;
-  console.log(items);
+  //console.log(items);
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    //Dispatch an action
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -47,7 +55,10 @@ const ListItems = (data) => {
                 ) : null}
 
                 <div className="absolute bottom-0 top-24   left-1/2 transform -translate-x-1/2">
-                  <button className="text-green-400 font-bold bg-white rounded shadow-lg w-20">
+                  <button
+                    className="text-green-400 font-bold bg-white rounded shadow-lg w-20 cursor-pointer"
+                    onClick={() => handleAddItem(item)}
+                  >
                     Add
                   </button>
                   <p className="text-gray-500 text-xs">Customisable</p>

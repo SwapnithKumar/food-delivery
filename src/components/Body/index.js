@@ -36,7 +36,7 @@ const Body = () => {
       <ul className="flex flex-wrap mt-6">
         {restaurants.map((restaurant) => (
           <Link
-            to={"/restaurant/" + restaurant.info.id}
+            to={"/food-delivery/restaurant/" + restaurant.info.id}
             key={restaurant.info.id}
           >
             <RestaurantCard restaurant={restaurant} key={restaurant.info.id} />
