@@ -28,7 +28,7 @@ const RestaurantCard = (restaurant) => {
           <p>{slaString}</p>
         </div>
         <p className="text-sm">{cuisines.join(",").substring(0, 30)}</p>
-        <p className="text-gray-600 ">Rs.{costForTwo}</p>
+        <p className="text-gray-600 ">{costForTwo}</p>
         <p className="text-gray-600 text-sm">{areaName}</p>
       </div>
     </div>

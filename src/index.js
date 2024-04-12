@@ -15,23 +15,23 @@ const appRouter = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/food-delivery",
         element: <Body />,
       },
       {
-        path: "/aboutus",
+        path: "/food-delivery/aboutus",
         element: <AboutUs />,
       },
       {
-        path: "/contactus",
+        path: "/food-delivery/contactus",
         element: <ContactUs />,
       },
       {
-        path: "/cart",
+        path: "/food-delivery/cart",
         element: <Cart />,
       },
       {
-        path: "/restaurant/:resId",
+        path: "/food-delivery/restaurant/:resId",
         element: <RestaurantMenu />,
       },
     ],

@@ -1,4 +1,25 @@
+# React and Redux both are different libraries
+
+# Zustand is same like Redux
+
+# Redux is used for state management
+
 # Getting Started with Create React App
+
+# Redux Toolkit
+
+    - Install @reduxjs/toolkit and react-redux
+    - Build our store
+    - Connnect our store to our app
+    - Slice (Cart Slice)
+    - Dispatch(action)
+    - Selector
+
+# IMMER -> Redux toolkit uses immer behind the scenes
+
+## RTK Query
+
+# Earlier ways middleware & thumbs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
