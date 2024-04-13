@@ -10,7 +10,7 @@ function App() {
   return (
     <Provider store={appStore}>
       <userContext.Provider value={{ username: userName, setUserName }}>
-        <div className="App pl-20 pr-20 items-center w-full">
+        <div className="App pl-10 pr-10 items-center w-full">
           <Header />
           <Outlet />
         </div>

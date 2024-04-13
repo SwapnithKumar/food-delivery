@@ -15,8 +15,8 @@ const RestaurantCard = (restaurant) => {
   const { slaString } = sla;
   const url = CLOUDINARY_URL + cloudinaryImageId;
   return (
-    <div className="mr-5 mb-5 shadow-lg hover:shadow-md transform hover:scale-95 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer rounded-2xl">
-      <div className="w-52 ">
+    <div className="mr-5 mb-5 w-52 shadow-lg hover:shadow-md transform hover:scale-95 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer rounded-2xl">
+      <div className="">
         <img src={url} className="rounded-2xl h-36 w-full" alt={name} />
       </div>
       <div className="flex flex-col items-start pl-2 pb-2">
