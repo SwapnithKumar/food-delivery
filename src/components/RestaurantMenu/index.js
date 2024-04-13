@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../../utils/constants";
 import useRestaurantMenuData from "../../Hooks/useRestaurantMenuData";
-import Shimmer from "../Shimmer/Shimmer";
 import RestaurantCategory from "../RestaurantCategory";
+import ShimmerMenuItems from "../ShimmerMenuItems/ShimmerMenuItems";
 const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState();
   const { resId } = useParams();
@@ -15,7 +15,7 @@ const RestaurantMenu = () => {
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  if (categories === undefined) return <Shimmer />;
+  if (categories === undefined) return <ShimmerMenuItems />;
   return (
     <div className="flex flex-col">
       <h1 className="self-start font-bold mb-10">Menu Items</h1>

@@ -21,19 +21,19 @@ const Body = () => {
   const restaurants =
     resData?.cards[1].card.card.gridElements.infoWithStyle.restaurants;
   return (
-    <div className="flex flex-col justify-center items-center pl-20">
-      <div className="flex items-center self-start">
+    <div className="flex flex-col justify-center items-center">
+      {/* <div className="flex items-center self-start">
         <label>Username : </label>
         <input
           className=" border-solid border-black p-2"
           value={username}
           onChange={(e) => setUserName(e.target.value)}
         />
-      </div>
-      <h1 className="text-black font-bold text-xl self-start">
+      </div> */}
+      <h1 className="text-black font-bold text-xl self-start pl-6">
         Top Restaurant chains near by you.
       </h1>
-      <ul className="flex flex-wrap mt-6">
+      <ul className="flex flex-wrap mt-6 justify-center">
         {restaurants.map((restaurant) => (
           <Link
             to={"/food-delivery/restaurant/" + restaurant.info.id}
