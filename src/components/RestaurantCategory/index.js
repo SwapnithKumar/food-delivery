@@ -7,11 +7,11 @@ const RestaurantCategory = ({ data, setShowIndex, showItems }) => {
     setShowIndex();
   };
   return (
-    <div className=" bg-gray-100  m-auto p-4 my-4 rounded-sm">
-      <div
-        className="flex justify-between mb-4 cursor-pointer"
-        onClick={handleClick}
-      >
+    <div
+      className=" bg-gray-100  m-auto p-4 my-4 rounded-sm cursor-pointer"
+      onClick={handleClick}
+    >
+      <div className="flex justify-between mb-4">
         <h1 className="font-bold">
           {title} ({itemCards.length})
         </h1>
