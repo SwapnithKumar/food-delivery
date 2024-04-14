@@ -1,13 +1,16 @@
 import "./index.css";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client"; // Correct import statement
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
-import Cart from "./components/Cart";
+// import Cart from "./components/Cart";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Shimmer from "./components/Shimmer/Shimmer";
+
+const Cart = lazy(() => import("./components/Cart"));
 
 const appRouter = createBrowserRouter([
   {
@@ -28,7 +31,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/food-delivery/cart",
-        element: <Cart />,
+        element: (
+          <Suspense fallback={<Shimmer></Shimmer>}>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "/food-delivery/restaurant/:resId",
