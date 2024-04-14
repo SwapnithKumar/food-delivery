@@ -21,6 +21,21 @@
 
 # Earlier ways middleware & thumbs
 
+# Types of testing(developer)
+
+    - Unit Testing -> Testing react components in isolation(Testing a one uint or component)
+    - Integration Testing -> (Testing the integration of the components)
+    - End to End Testing - e2e testing -> (Testing the react app as soon as user land on the application till leaving the application)
+
+# Setting up Testing in our app
+
+    - Install react testing libray(Inbuilt in create react app)
+    - Install jest (Inbuilt in create react app)
+    - Install Babel dependencies
+    - Configure Babel
+
+###### Above this is the notes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
